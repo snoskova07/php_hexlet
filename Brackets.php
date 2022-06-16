@@ -16,8 +16,9 @@
 function isBalanced($string) {
     $open = 0;
     $close = 0;
-    for ($i = 0; $i < strlen($string); $i++) {
-        if ($string[0] === ')') {
+    $lengthOfString = strlen($string);
+    for ($i = 0; $i < $lengthOfString; $i++) {
+        if ($string[0] === ')' || $string[$lengthOfString - 1] === '(') {
            return ("False");
         }
         if ($string[$i] !== ')' && $string[$i] !== '(') {
@@ -40,6 +41,7 @@ function isBalanced($string) {
     }
 }
 
+var_dump(isBalanced('())('));  // false
 var_dump(isBalanced('(())'));  // true
 var_dump(isBalanced(')('));  // false
 var_dump(isBalanced('((())')); // false
