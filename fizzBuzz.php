@@ -1,4 +1,5 @@
 <?php
+
 /*
 Реализуйте функцию fizzBuzz(), которая выводит на экран числа в диапазоне от
  $begin до $end. При этом:
@@ -10,20 +11,20 @@
 Функция принимает два параметра ($begin и $end), определяющих начало и конец диапазона (включительно).
  Если диапазон пуст (в случае, когда $begin > $end), то функция просто ничего не печатает.
 */
-function fizzBuzz($begin, $end) {
+
+function fizzBuzz($begin, $end)
+{
     for ($i = $begin; $i <= $end; $i++) {
         if ($i % 5 === 0 && $i % 3 === 0) {
             print_r(" FizzBuzz ");
-        }
-        elseif ($i % 5 === 0) {
+        } elseif ($i % 5 === 0) {
             print_r(" Bazz ");
-        }
-        elseif ($i % 3 === 0) {
+        } elseif ($i % 3 === 0) {
             print_r(" Fizz ");
-        }
-        else {
+        } else {
             print_r(" {$i} ");
         }
     }
 }
+
 fizzBuzz(11, 21);

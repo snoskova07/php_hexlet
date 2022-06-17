@@ -13,24 +13,24 @@
 а вот такой допустим ()().
 */
 
-function isBalanced($string) {
+function isBalanced($string)
+{
     $open = 0;
     $close = 0;
     $lengthOfString = strlen($string);
+
     for ($i = 0; $i < $lengthOfString; $i++) {
         if ($string[0] === ')' || $string[$lengthOfString - 1] === '(') {
            return ("False");
         }
+
         if ($string[$i] !== ')' && $string[$i] !== '(') {
             return ("Несанкционированный символ: {$string[$i]}");
-        }
-        elseif ($string[$i] === '(') {
+        } elseif ($string[$i] === '(') {
             $open = $open + 1;
-        }
-        elseif ($string[$i] === ')') {
+        } elseif ($string[$i] === ')') {
             $close = $close + 1;
         }
-
     }
 
     if ($open !== $close) {

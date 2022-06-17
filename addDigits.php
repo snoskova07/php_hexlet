@@ -1,4 +1,5 @@
 <?php
+
 /*
 Реализуйте функцию addDigits(), которая принимает на вход неотрицательное
 целое число и возвращает
@@ -18,18 +19,17 @@
 Результат: 1
  */
 
-function addDigits($chislo) {
+function addDigits($chislo)
+{
     $str = (string)$chislo;
-
-        while (strlen($str) > 1) {
-            $sum = 0;
-            for ($i = 0; $i < strlen($str); $i++) {
-                $sum = $sum + (integer)$str[$i];
-            }
-            var_dump('промежуточная сумма ' . $sum);
-            $str = (string)$sum;
+    while (strlen($str) > 1) {
+        $sum = 0;
+        for ($i = 0; $i < strlen($str); $i++) {
+            $sum = $sum + (integer)$str[$i];
         }
- print_r('Результат: ' . $sum);
+        $str = (string)$sum;
+    }
+    print_r('Результат: ' . $sum);
 }
 
 addDigits(7007);

@@ -13,7 +13,8 @@
 33 550 336,
 */
 
-function isPerfect($number) {
+function isPerfect($number)
+{
     $sum = 0;
     for ($i = 1; $i < $number; ++$i) {
         if ($number % $i === 0) {
@@ -26,4 +27,5 @@ function isPerfect($number) {
         return "Увы. Число {$number} НЕ совершенное";
     }
 }
+
 print_r(isPerfect(33));
