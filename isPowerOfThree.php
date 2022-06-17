@@ -7,18 +7,10 @@
 
 function isPowerOfThree($num)
 {
-    $i = 0;
     while ($num / 3 >= 1 && $num % 3 === 0) {
         $num /= 3;
-        $i++;
     }
-
-     if ($num !== 1) {
-         var_dump($num);
-         return false;
-     } else {
-         return true;
-     }
+    return $num === 1;
 }
 
 var_dump(isPowerOfThree(81));

@@ -18,14 +18,10 @@ function isPerfect($number)
     $sum = 0;
     for ($i = 1; $i < $number; ++$i) {
         if ($number % $i === 0) {
-            $sum = $sum + $i;
+            $sum += $i;
         }
     }
-    if ($sum === $number) {
-        return true;
-    } else {
-        return false;
-    }
+    return $sum === $number;
 }
 
 var_dump(isPerfect(6));

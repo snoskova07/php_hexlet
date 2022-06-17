@@ -26,19 +26,16 @@ function isBalanced($string)
     for ($i = 0; $i < $lengthOfString; $i++) {
         if ($string[$i] !== ')' && $string[$i] !== '(') {
             return false;
-        } elseif ($string[$i] === '(') {
+        }
+
+        if ($string[$i] === '(') {
             $open += 1;
         } elseif ($string[$i] === ')') {
             $close += 1;
         }
     }
 
-    if ($open !== $close) {
-        return false;
-    }
-    else {
-        return true;
-    }
+    return $open === $close;
 }
 
 var_dump(isBalanced('())('));  // false

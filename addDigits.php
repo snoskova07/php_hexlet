@@ -24,12 +24,12 @@ function addDigits($number)
     $str = (string)$number;
     while (strlen($str) > 1) {
         $sum = 0;
-        for ($i = 0; $i < strlen($str); $i++) {
+        for ($i = 0, $iMax = strlen($str); $i < $iMax; $i++) {
             $sum += (integer)$str[$i];
         }
         $str = (string)$sum;
     }
-    return (integer)$sum;
+    return $sum;
 }
 
 var_dump(addDigits(7007)); // 7 + 7 = 14, 1 + 4 = 5

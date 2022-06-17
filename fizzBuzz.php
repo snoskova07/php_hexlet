@@ -17,19 +17,17 @@ function fizzBuzz($begin, $end)
     $result = '';
     for ($i = $begin; $i <= $end; $i++) {
         if ($i % 5 === 0 && $i % 3 === 0) {
-            $result .= ' FizzBuzz ';
+            $result .= 'FizzBuzz ';
         } elseif ($i % 5 === 0) {
-            $result .= ' Bazz ';
+            $result .= 'Bazz ';
         } elseif ($i % 3 === 0) {
-            $result .= ' Fizz ';
+            $result .= 'Fizz ';
         } else {
-            $result .= " {$i} ";
+            $result .= "{$i} ";
         }
     }
-    $result = str_replace('  ', ' ', $result);
-    $result = ltrim( $result);
-    $result = rtrim( $result);
-    return $result;
+    $result = rtrim($result);
+    print_r($result);
 }
 
-var_dump(fizzBuzz(2, 21));
+fizzBuzz(2, 21);
