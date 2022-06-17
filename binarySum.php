@@ -5,10 +5,10 @@
 Результат (вычисленная сумма) также должен быть бинарным числом в виде строки.
 */
 
-function binarySum ($a, $b)
+function binarySum($a, $b)
 {
-    $sum_dec = bindec($a) + bindec($b);
-    return decbin($sum_dec);
+    $sumDec = bindec($a) + bindec($b);
+    return decbin($sumDec);
 }
 
 print_r(binarySum('10', '1') . "\n");

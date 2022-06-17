@@ -22,10 +22,10 @@ function isPerfect($number)
         }
     }
     if ($sum === $number) {
-        return "Число {$number} совершенное";
+        return true;
     } else {
-        return "Увы. Число {$number} НЕ совершенное";
+        return false;
     }
 }
 
-print_r(isPerfect(33));
+var_dump(isPerfect(6));

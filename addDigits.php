@@ -19,17 +19,17 @@
 Результат: 1
  */
 
-function addDigits($chislo)
+function addDigits($number)
 {
-    $str = (string)$chislo;
+    $str = (string)$number;
     while (strlen($str) > 1) {
         $sum = 0;
         for ($i = 0; $i < strlen($str); $i++) {
-            $sum = $sum + (integer)$str[$i];
+            $sum += (integer)$str[$i];
         }
         $str = (string)$sum;
     }
-    print_r('Результат: ' . $sum);
+    return (integer)$sum;
 }
 
-addDigits(7007);
+var_dump(addDigits(7007)); // 7 + 7 = 14, 1 + 4 = 5

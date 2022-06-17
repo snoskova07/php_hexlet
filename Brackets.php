@@ -19,25 +19,25 @@ function isBalanced($string)
     $close = 0;
     $lengthOfString = strlen($string);
 
-    for ($i = 0; $i < $lengthOfString; $i++) {
-        if ($string[0] === ')' || $string[$lengthOfString - 1] === '(') {
-           return ("False");
-        }
+    if ($string[0] === ')' || $string[$lengthOfString - 1] === '(') {
+        return false;
+    }
 
+    for ($i = 0; $i < $lengthOfString; $i++) {
         if ($string[$i] !== ')' && $string[$i] !== '(') {
-            return ("Несанкционированный символ: {$string[$i]}");
+            return false;
         } elseif ($string[$i] === '(') {
-            $open = $open + 1;
+            $open += 1;
         } elseif ($string[$i] === ')') {
-            $close = $close + 1;
+            $close += 1;
         }
     }
 
     if ($open !== $close) {
-        return ('False');
+        return false;
     }
     else {
-        return ('True');
+        return true;
     }
 }
 

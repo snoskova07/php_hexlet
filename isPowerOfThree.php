@@ -7,20 +7,18 @@
 
 function isPowerOfThree($num)
 {
-    $chislo = $num;
     $i = 0;
-
     while ($num / 3 >= 1 && $num % 3 === 0) {
-        $num = $num / 3;
-        $i = $i + 1;
+        $num /= 3;
+        $i++;
     }
 
      if ($num !== 1) {
          var_dump($num);
-         return ("Число {$chislo} НЕ является степенью тройки");
+         return false;
      } else {
-         return ("Число {$chislo} является {$i} степенью тройки");
+         return true;
      }
 }
 
-print_r(isPowerOfThree(81));
+var_dump(isPowerOfThree(81));

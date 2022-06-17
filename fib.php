@@ -18,9 +18,9 @@ function fib($number)
         $sum2 = $sum;
         $sum = $perv0 + $sum2;
     }
-    var_dump("Сумма {$number} чисел Фибоначчи: {$sum}");
+    return $sum;
 }
 
-fib(3); // 2
-fib(5); // 5
-fib(10); // 55
+var_dump(fib(3)); // 2
+var_dump(fib(5)); // 5
+var_dump(fib(10)); // 55
