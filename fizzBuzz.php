@@ -19,7 +19,7 @@ function fizzBuzz($begin, $end)
         if ($i % 5 === 0 && $i % 3 === 0) {
             $result .= 'FizzBuzz ';
         } elseif ($i % 5 === 0) {
-            $result .= 'Bazz ';
+            $result .= 'Buzz ';
         } elseif ($i % 3 === 0) {
             $result .= 'Fizz ';
         } else {
