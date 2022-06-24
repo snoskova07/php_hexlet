@@ -5,12 +5,13 @@
 степенью тройки. Например, число 27 – это третья степень (33), а 81 – четвёртая (34).
 */
 
-function isPowerOfThree($num)
+class Three
 {
-    while ($num / 3 >= 1 && $num % 3 === 0) {
-        $num /= 3;
+    public function isPowerOfThree(int $num): bool
+    {
+        while ($num / 3 >= 1 && $num % 3 === 0) {
+            $num /= 3;
+        }
+        return $num === 1;
     }
-    return $num === 1;
 }
-
-var_dump(isPowerOfThree(81));

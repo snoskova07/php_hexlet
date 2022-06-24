@@ -11,23 +11,23 @@
 Функция принимает два параметра ($begin и $end), определяющих начало и конец диапазона (включительно).
  Если диапазон пуст (в случае, когда $begin > $end), то функция просто ничего не печатает.
 */
-
-function fizzBuzz($begin, $end)
+class Fzbz
 {
-    $result = '';
-    for ($i = $begin; $i <= $end; $i++) {
-        if ($i % 5 === 0 && $i % 3 === 0) {
-            $result .= 'FizzBuzz ';
-        } elseif ($i % 5 === 0) {
-            $result .= 'Buzz ';
-        } elseif ($i % 3 === 0) {
-            $result .= 'Fizz ';
-        } else {
-            $result .= "{$i} ";
+    public function fizzBuzz(int $begin, int $end)
+    {
+        $result = '';
+        for ($i = $begin; $i <= $end; $i++) {
+            if ($i % 5 === 0 && $i % 3 === 0) {
+                $result .= 'FizzBuzz ';
+            } elseif ($i % 5 === 0) {
+                $result .= 'Buzz ';
+            } elseif ($i % 3 === 0) {
+                $result .= 'Fizz ';
+            } else {
+                $result .= "{$i} ";
+            }
         }
+        $result = rtrim($result);
+        print_r($result);
     }
-    $result = rtrim($result);
-    print_r($result);
 }
-
-fizzBuzz(2, 21);

@@ -13,15 +13,16 @@
 33 550 336,
 */
 
-function isPerfect($number)
+class Perfect
 {
-    $sum = 0;
-    for ($i = 1; $i < $number; ++$i) {
-        if ($number % $i === 0) {
-            $sum += $i;
+    public function isPerfect(int $number): bool
+    {
+        $sum = 0;
+        for ($i = 1; $i < $number; ++$i) {
+            if ($number % $i === 0) {
+                $sum += $i;
+            }
         }
+        return $sum === $number;
     }
-    return $sum === $number;
 }
-
-var_dump(isPerfect(6));

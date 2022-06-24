@@ -1,0 +1,14 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\snoskova\Dropbox\php_hexlet\.idea/dataSources/
+/../../../../../../:\Users\snoskova\Dropbox\php_hexlet\.idea/modules.xml
+/../../../../../../:\Users\snoskova\Dropbox\php_hexlet\.idea/.idea/.gitignore
+/../../../../../../:\Users\snoskova\Dropbox\php_hexlet\.idea/.idea/php_hexlet.iml
+/../../../../../../:\Users\snoskova\Dropbox\php_hexlet\.idea/.idea/vcs.xml
+
+
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

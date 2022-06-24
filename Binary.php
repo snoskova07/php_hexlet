@@ -5,11 +5,11 @@
 Результат (вычисленная сумма) также должен быть бинарным числом в виде строки.
 */
 
-function binarySum($a, $b)
+class Binary
 {
-    $sumDec = bindec($a) + bindec($b);
-    return decbin($sumDec);
+    public function binarySum(string $a, string $b): string
+    {
+        $sumDec = bindec($a) + bindec($b);
+        return decbin($sumDec);
+    }
 }
-
-print_r(binarySum('10', '1') . "\n");
-var_dump(binarySum('1101', '101'));
