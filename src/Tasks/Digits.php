@@ -19,6 +19,8 @@
 Результат: 1
  */
 
+namespace MyApp\Tasks;
+
 class Digits
 {
     public function addDigits(int $number): int

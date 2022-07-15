@@ -13,6 +13,8 @@
 33 550 336,
 */
 
+namespace MyApp\Tasks;
+
 class Perfect
 {
     public function isPerfect(int $number): bool

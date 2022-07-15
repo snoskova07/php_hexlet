@@ -5,6 +5,8 @@
 (номер — всегда строка). Функция должна возвращать true, если билет счастливый, или false, если нет.
 */
 
+namespace MyApp\Tasks;
+
 class Ticket
 {
     public function isHappy(string $ticket): bool

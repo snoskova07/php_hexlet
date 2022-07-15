@@ -8,6 +8,8 @@
 f(n) = f(n-1) + f(n-2)
 */
 
+namespace MyApp\Tasks;
+
 class Fibo
 {
     public function fib(int $number): int {

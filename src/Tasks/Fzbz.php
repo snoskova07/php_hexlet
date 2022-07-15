@@ -11,6 +11,9 @@
 Функция принимает два параметра ($begin и $end), определяющих начало и конец диапазона (включительно).
  Если диапазон пуст (в случае, когда $begin > $end), то функция просто ничего не печатает.
 */
+
+namespace MyApp\Tasks;
+
 class Fzbz
 {
     public function fizzBuzz(int $begin, int $end)

@@ -1,0 +1,31 @@
+{
+    "name": "snoskova/php_hexlet",
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MyApp\\": "src/",
+            "MyAppTests\\": "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Svetlana Noskova",
+            "email": "snoskova07@gmail.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "*"
+    },
+
+    "scripts": {
+        "lint": "phpcs --standard=PSR12 src",
+        "test": "phpunit"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

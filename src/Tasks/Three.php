@@ -5,6 +5,8 @@
 степенью тройки. Например, число 27 – это третья степень (33), а 81 – четвёртая (34).
 */
 
+namespace MyApp\Tasks;
+
 class Three
 {
     public function isPowerOfThree(int $num): bool
