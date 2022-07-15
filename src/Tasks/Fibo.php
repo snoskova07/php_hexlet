@@ -8,19 +8,21 @@
 f(n) = f(n-1) + f(n-2)
 */
 
-function fib($number)
+namespace MyApp\Tasks;
+
+class Fibo
 {
-    $sum = 0;
-    $sum2 = 1;
+    public function fib(int $number): int
+    {
+        $sum = 0;
+        $sum2 = 1;
 
-    for ($i = 0; $i < $number; $i++) {
-        $perv0 = $sum2;
-        $sum2 = $sum;
-        $sum = $perv0 + $sum2;
+        for ($i = 0; $i < $number; $i++) {
+            $perv0 = $sum2;
+            $sum2 = $sum;
+            $sum = $perv0 + $sum2;
+        }
+
+        return $sum;
     }
-    return $sum;
 }
-
-var_dump(fib(3)); // 2
-var_dump(fib(5)); // 5
-var_dump(fib(10)); // 55
