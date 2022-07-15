@@ -25,6 +25,9 @@ class Digits
 {
     public function addDigits(int $number): int
     {
+        if ($number < 10) {
+            return $number;
+        }
         $str = (string)$number;
         while (strlen($str) > 1) {
             $sum = 0;
@@ -33,6 +36,6 @@ class Digits
             }
             $str = (string)$sum;
         }
-        return $sum;
+        return (int)$sum;
     }
 }

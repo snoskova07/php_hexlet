@@ -12,7 +12,8 @@ namespace MyApp\Tasks;
 
 class Fibo
 {
-    public function fib(int $number): int {
+    public function fib(int $number): int
+    {
         $sum = 0;
         $sum2 = 1;
 
@@ -21,6 +22,7 @@ class Fibo
             $sum2 = $sum;
             $sum = $perv0 + $sum2;
         }
-    return $sum;
+
+        return $sum;
     }
 }

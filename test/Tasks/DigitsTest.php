@@ -7,13 +7,23 @@ use MyApp\Tasks\Digits;
 
 class DigitsTest extends TestCase
 {
-    public function testDigitsSuccess()
+    /**
+     * @dataProvider digitsProvider
+     */
+    public function testDigitsSuccess(int $a, int $expected)
     {
         $obj = new Digits();
-        $expected = 5;
-        $actual = $obj->addDigits(7007);
+        self::assertEquals($expected, $obj->addDigits($a));
+    }
 
-        self::assertEquals($expected, $actual);
+    public function digitsProvider(): array
+    {
+        return [
+            [7007, 5],
+            [919, 1],
+            [7, 7],
+            [10, 1],
+        ];
     }
 
 }
