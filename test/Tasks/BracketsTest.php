@@ -7,7 +7,7 @@ use MyApp\Tasks\Brackets;
 
 class BracketsTest extends TestCase
 {
-    public function testBracketsFalse()
+    public function testBracketsFalse(): void
     {
         $bracket = new Brackets();
 
@@ -20,7 +20,7 @@ class BracketsTest extends TestCase
         self::assertEquals($expected, $actual);
     }
 
-    public function testBracketsTrue()
+    public function testBracketsTrue(): void
     {
         $bracket = new Brackets();
 

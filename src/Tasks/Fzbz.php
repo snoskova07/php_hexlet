@@ -16,7 +16,7 @@ namespace MyApp\Tasks;
 
 class Fzbz
 {
-    public function fizzBuzz(int $begin, int $end)
+    public function fizzBuzz(int $begin, int $end): void
     {
         $result = '';
         for ($i = $begin; $i <= $end; $i++) {

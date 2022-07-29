@@ -9,8 +9,10 @@ class DigitsTest extends TestCase
 {
     /**
      * @dataProvider digitsProvider
+     * @param int $a
+     * @param int $expected
      */
-    public function testDigitsSuccess(int $a, int $expected)
+    public function testDigitsSuccess(int $a, int $expected): void
     {
         $obj = new Digits();
         self::assertEquals($expected, $obj->addDigits($a));

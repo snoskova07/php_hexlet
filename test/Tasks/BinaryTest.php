@@ -7,9 +7,9 @@ use MyApp\Tasks\Binary;
 
 class BinaryTest extends TestCase
 {
-    public function testBinarySimple()
+    public function testBinarySimple(): void
     {
-        $bs= new Binary();
+        $bs = new Binary();
         $a = '101';
         $b = '001';
         $expected = '110';
@@ -20,10 +20,13 @@ class BinaryTest extends TestCase
 
     /**
      * @dataProvider binarySumProvider
+     * @param string $a
+     * @param string $b
+     * @param string $expected
      */
-    public function testBinaryUsingProvider(string $a, string $b, string $expected)
+    public function testBinaryUsingProvider(string $a, string $b, string $expected): void
     {
-        $bs= new Binary();
+        $bs = new Binary();
         self::assertEquals($expected, $bs->binarySum($a, $b));
     }
 
@@ -38,13 +41,14 @@ class BinaryTest extends TestCase
 
     /**
      * @dataProvider binaryWrongProvider
+     * @param string $a
+     * @param string $b
      */
-    public function testBinaryWrong(string $a, string $b)
+    public function testBinaryWrong(string $a, string $b): void
     {
         $bs = new Binary();
         $this->expectException(\InvalidArgumentException::class);
         $bs->binarySum($a, $b);
-
     }
 
     public function binaryWrongProvider()
@@ -54,7 +58,5 @@ class BinaryTest extends TestCase
             ['0', ''],
             ['', ''],
         ];
-    }   
-    
-    
+    }
 }

@@ -32,10 +32,10 @@ class Digits
         while (strlen($str) > 1) {
             $sum = 0;
             for ($i = 0, $iMax = strlen($str); $i < $iMax; $i++) {
-                $sum += (integer)$str[$i];
+                $sum += (int)$str[$i];
             }
             $str = (string)$sum;
         }
-        return (int)$sum;
+        return (int)$str;
     }
 }

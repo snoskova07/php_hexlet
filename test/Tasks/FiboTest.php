@@ -9,8 +9,10 @@ class FiboTest extends TestCase
 {
     /**
      * @dataProvider fiboSuccessProvider
+     * @param int $a
+     * @param int $expected
      */
-    public function testFiboSuccess(int $a, int $expected)
+    public function testFiboSuccess(int $a, int $expected): void
     {
         $obj = new Fibo();
         self::assertEquals($expected, $obj->fib($a));
@@ -27,8 +29,10 @@ class FiboTest extends TestCase
 
     /**
      * @dataProvider fiboWrongProvider
+     * @param int $a
+     * @param int $expected
      */
-    public function testFiboWrong(int $a, int $expected)
+    public function testFiboWrong(int $a, int $expected): void
     {
         $obj = new Fibo();
         $this->expectException(\InvalidArgumentException::class);

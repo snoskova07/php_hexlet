@@ -7,14 +7,14 @@ use MyApp\Tasks\Perfect;
 
 class PerfectTest extends TestCase
 {
-    public function testSuccess()
+    public function testSuccess(): void
     {
         $obj = new Perfect();
         $expected = true;
         self::assertEquals($expected, $obj->isPerfect(6));
     }
 
-    public function testFailed()
+    public function testFailed(): void
     {
         $obj = new Perfect();
         $expected = false;

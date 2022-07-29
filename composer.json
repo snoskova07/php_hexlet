@@ -19,7 +19,8 @@
         }
     ],
     "require": {
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "ext-http": "*"
     },
 
     "scripts": {
@@ -27,6 +28,8 @@
         "test": "phpunit"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest"
+        ,
         "phpunit/phpunit": "^9.5"
     }
 }

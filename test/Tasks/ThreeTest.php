@@ -7,7 +7,7 @@ use MyApp\Tasks\Three;
 
 class ThreeTest extends TestCase
 {
-    public function testThreeSuccess()
+    public function testThreeSuccess(): void
     {
         $obj = new Three();
         $expected = true;
@@ -15,7 +15,7 @@ class ThreeTest extends TestCase
         self::assertEquals($expected, $obj->isPowerOfThree(81));
     }
 
-    public function testThreeFailed()
+    public function testThreeFailed(): void
     {
         $obj = new Three();
         $expected = false;

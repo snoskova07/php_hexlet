@@ -3,13 +3,14 @@
 use MyApp\Tasks\Ticket;
 use PHPUnit\Framework\TestCase;
 
-
 class TicketTest extends TestCase
 {
     /**
      * @dataProvider ticketProvider
+     * @param string $a
+     * @param bool $expected
      */
-    public function testTicketUsingProvider(string $a, bool $expected)
+    public function testTicketUsingProvider(string $a, bool $expected): void
     {
         $bs = new Ticket();
         self::assertEquals($expected, $bs->isHappy($a));
