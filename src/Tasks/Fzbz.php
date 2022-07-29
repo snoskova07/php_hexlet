@@ -12,22 +12,25 @@
  Если диапазон пуст (в случае, когда $begin > $end), то функция просто ничего не печатает.
 */
 
-function fizzBuzz($begin, $end)
-{
-    $result = '';
-    for ($i = $begin; $i <= $end; $i++) {
-        if ($i % 5 === 0 && $i % 3 === 0) {
-            $result .= 'FizzBuzz ';
-        } elseif ($i % 5 === 0) {
-            $result .= 'Buzz ';
-        } elseif ($i % 3 === 0) {
-            $result .= 'Fizz ';
-        } else {
-            $result .= "{$i} ";
-        }
-    }
-    $result = rtrim($result);
-    print_r($result);
-}
+namespace MyApp\Tasks;
 
-fizzBuzz(2, 21);
+class Fzbz
+{
+    public function fizzBuzz(int $begin, int $end): void
+    {
+        $result = '';
+        for ($i = $begin; $i <= $end; $i++) {
+            if ($i % 5 === 0 && $i % 3 === 0) {
+                $result .= 'FizzBuzz ';
+            } elseif ($i % 5 === 0) {
+                $result .= 'Buzz ';
+            } elseif ($i % 3 === 0) {
+                $result .= 'Fizz ';
+            } else {
+                $result .= "{$i} ";
+            }
+        }
+        $result = rtrim($result);
+        print_r($result);
+    }
+}

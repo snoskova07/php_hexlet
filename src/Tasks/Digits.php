@@ -19,17 +19,23 @@
 Результат: 1
  */
 
-function addDigits($number)
-{
-    $str = (string)$number;
-    while (strlen($str) > 1) {
-        $sum = 0;
-        for ($i = 0, $iMax = strlen($str); $i < $iMax; $i++) {
-            $sum += (integer)$str[$i];
-        }
-        $str = (string)$sum;
-    }
-    return $sum;
-}
+namespace MyApp\Tasks;
 
-var_dump(addDigits(7007)); // 7 + 7 = 14, 1 + 4 = 5
+class Digits
+{
+    public function addDigits(int $number): int
+    {
+        if ($number < 10) {
+            return $number;
+        }
+        $str = (string)$number;
+        while (strlen($str) > 1) {
+            $sum = 0;
+            for ($i = 0, $iMax = strlen($str); $i < $iMax; $i++) {
+                $sum += (int)$str[$i];
+            }
+            $str = (string)$sum;
+        }
+        return (int)$str;
+    }
+}

@@ -13,15 +13,18 @@
 33 550 336,
 */
 
-function isPerfect($number)
-{
-    $sum = 0;
-    for ($i = 1; $i < $number; ++$i) {
-        if ($number % $i === 0) {
-            $sum += $i;
-        }
-    }
-    return $sum === $number;
-}
+namespace MyApp\Tasks;
 
-var_dump(isPerfect(6));
+class Perfect
+{
+    public function isPerfect(int $number): bool
+    {
+        $sum = 0;
+        for ($i = 1; $i < $number; ++$i) {
+            if ($number % $i === 0) {
+                $sum += $i;
+            }
+        }
+        return $sum === $number;
+    }
+}
