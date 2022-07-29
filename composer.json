@@ -2,7 +2,8 @@
     "name": "snoskova/php_hexlet",
     "autoload": {
         "psr-4": {
-            "MyApp\\": "src/"
+            "MyApp\\": "src/",
+            "Tests\\": "test/"
         }
     },
     "autoload-dev": {
@@ -22,7 +23,7 @@
     },
 
     "scripts": {
-        "lint": "phpcs --standard=PSR12 src",
+        "lint": "phpcs --standard=PSR12 src test",
         "test": "phpunit"
     },
     "require-dev": {
